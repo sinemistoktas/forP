@@ -8,12 +8,12 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #ffe6f0;
+            background-color: #C1E1C1;
             color: #333;
             padding: 20px;
         }
         h1 {
-            color: #ff4081;
+            color: #2a6655;
         }
         .container {
             max-width: 600px;
@@ -35,7 +35,7 @@
             margin-top: 20px;
         }
         .btn {
-            background-color: #ff4081;
+            background-color: #3d8542;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -44,14 +44,15 @@
             margin-top: 20px;
         }
         .btn:hover {
-            background-color: #e6005c;
+            background-color: #2e6d37;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Happy 25 Months, My Love! ❤️</h1>
-        <p>Here's a little something to celebrate us and remind you how much I love you!</p>
+        <p>My love, I know this morning wasn’t the best, and I’m really sorry for adding any stress to your day. I promise to do my best to not do this again. You are my beautiful joy, and I want all our moments to be filled with happiness. Today is our 25th month anniversary (only 25x3 more months to a 100 🤩🤪), and I wanted to take a moment of your time to remind you of how special you are to me :))</p>
+        <p>Here are 25 reasons why you make my life better every single day. I love you so much ikmikkkk ! ⭐️💛🍞</p>
         
         <button class="btn" onclick="showReasons()">25 Reasons I Love You</button>
         
@@ -82,13 +83,32 @@
             <li>Your love, which is my favorite thing in the world</li>
             <li>Because you're YOU, and I adore you endlessly ❤️</li>
         </ul>
-        
-        <p class="message">Thank you for being the best part of my life. I love you now and forever! 💖</p>
+        <div class="forgiveness" style="display:none;" id="forgivenessSection">
+            <p>Do you forgive me? 🥺🥺🥺</p>
+            <button class="btn" onclick="forgivenessLoop(true)">Yes</button>
+            <button class="btn" onclick="forgivenessLoop(false)">No</button>
+        </div>
     </div>
 
     <script>
         function showReasons() {
             document.getElementById("reasonsList").style.display = "block";
+            document.getElementById("forgivenessSection").style.display = "block";
+        }
+
+        function forgivenessLoop(isForgiven) {
+            if (isForgiven) {
+                alert("YAYYYYYY ILY TOOOO 🥺🥹❤️❤️❤️💖💞");
+            } else {
+                setTimeout(() => {
+                    let answer = confirm("Do you forgive me? 🥺🥺🥺");
+                    if (answer) {
+                        forgivenessLoop(true);
+                    } else {
+                        forgivenessLoop(false);
+                    }
+                }, 500);
+            }
         }
     </script>
 </body>

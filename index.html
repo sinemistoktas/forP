@@ -23,17 +23,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .reasons {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .reasons li {
-            margin: 10px 0;
-        }
-        .message {
-            font-style: italic;
-            margin-top: 20px;
-        }
         .btn {
             background-color: #3d8542;
             color: white;
@@ -56,33 +45,36 @@
         
         <button class="btn" onclick="showReasons()">25 Reasons I Love You</button>
         
-        <ul class="reasons" id="reasonsList" style="display:none;">
-            <li>Your beautiful smile that makes my day</li>
-            <li>The way you laugh at my dumb jokes</li>
-            <li>How you always support me no matter what</li>
-            <li>Your kindness and big heart</li>
-            <li>Your hugs that feel like home</li>
-            <li>How you look at me with love</li>
-            <li>Your ambition and drive</li>
-            <li>The way you scrunch your nose when you think</li>
-            <li>Our late-night talks</li>
-            <li>The way you make me feel loved</li>
-            <li>How you always find a way to make me smile</li>
-            <li>Your amazing taste in music</li>
-            <li>The way you take care of me</li>
-            <li>Your silly, cute moments</li>
-            <li>How we can talk for hours</li>
-            <li>How you inspire me to be better</li>
-            <li>Your hand fits perfectly in mine</li>
-            <li>The way you get excited about little things</li>
-            <li>Your love for adventure</li>
-            <li>The way you believe in us</li>
-            <li>How you listen when I need to talk</li>
-            <li>Your ability to make any moment special</li>
-            <li>The way you make my world brighter</li>
-            <li>Your love, which is my favorite thing in the world</li>
-            <li>Because you're YOU, and I adore you endlessly ❤️</li>
-        </ul>
+        <div class="reasons" id="reasonsList" style="display:none; text-align: center;">
+            <p>Your beautiful smile that makes my day</p>
+            <p>Your beautiful butt that makes my day</p>
+            <p>Your smellllllll</p>
+            <p>The way you laugh at my dumb jokes</p>
+            <p>How you always support me</p>
+            <p>Your kindness and big heart</p>
+            <p>Your hugs that feel like home</p>
+            <p>How you look at me with love</p>
+            <p>Your ambition and drive</p>
+            <p>The way you scrunch your nose like a bat</p>
+            <p>The way you make me feel loved</p>
+            <p>How you always find a way to make me smile</p>
+            <p>Your amazing taste in music</p>
+            <p>How your body moves when you dance</p>
+            <p>The way you take care of me</p>
+            <p>Your silly, cute moments</p>
+            <p>How we can talk for hours about anything</p>
+            <p>How you inspire me to be better</p>
+            <p>The way our bodies fit perfectly</p>
+            <p>The way you get excited about your little peace time at home</p>
+            <p>Your love for koalasss</p>
+            <p>The way you work for what you believe in</p>
+            <p>How you listen when I need to talk</p>
+            <p>Your ability to make any moment special</p>
+            <p>The way you make my world brighter</p>
+            <p>Your love (and smell), which is my favorite thing in the world</p>
+            <p>Because you're YOU, and I love you as wide as the universe❤️</p>
+        </div>
+        <button class="btn" id="mysteryButton" style="background-color: #D8BFD8; display:none; margin: 20px auto;" onclick="showForgiveness()">🔮 Mystery Button 🔮</button>
         <div class="forgiveness" style="display:none;" id="forgivenessSection">
             <p>Do you forgive me? 🥺🥺🥺</p>
             <button class="btn" onclick="forgivenessLoop(true)">Yes</button>
@@ -92,8 +84,19 @@
 
     <script>
         function showReasons() {
-            document.getElementById("reasonsList").style.display = "block";
+            document.getElementById('reasonsList').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('mysteryButton').style.display = 'block';
+            }, 2500); // Delay to ensure all 25 reasons are visible
+            document.getElementById('reasonsList').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('mysteryButton').style.display = 'block';
+            }, 500);
+        }
+
+        function showForgiveness() {
             document.getElementById("forgivenessSection").style.display = "block";
+            document.getElementById("mysteryButton").style.display = "none";
         }
 
         function forgivenessLoop(isForgiven) {
